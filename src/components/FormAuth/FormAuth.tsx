@@ -23,7 +23,7 @@ const FormAuth = <T extends object>({ title, subTitle, inputs, btn, footer, setD
 	};
 
 	return (
-		<form className="flex flex-col min-h-[547px] items-center" onSubmit={sendData}>
+		<form className="flex flex-col min-h-[540px] items-center" onSubmit={sendData}>
 			<h1 className="font-extrabold text-2xl mb-[8px]">{title}</h1>
 			<p className="font-semibold text-[14px] mb-8">{subTitle}</p>
 			<div className={`w-full grow flex flex-col gap-8 ${inputs.length > 3 ? "grid grid-cols-6 gap-x-4 gap-y-2" : ""}`}>
@@ -34,7 +34,7 @@ const FormAuth = <T extends object>({ title, subTitle, inputs, btn, footer, setD
 						<label htmlFor={"input" + index} className="mb-1 text-[15px]">{input.label}</label>
 						{input.type === "file" && (
 							<label htmlFor={"input" + index}>
-								<img src={imgUrl} alt="" className="w-32 h-32 rounded-full cursor-pointer" />
+								<img src={imgUrl} alt="" className="w-26 h-26 rounded-full cursor-pointer" />
 							</label>
 						)}
 						<input
