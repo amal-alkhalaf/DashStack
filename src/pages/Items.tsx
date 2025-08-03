@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
 
 const Items = () => {
-  return (
-	<>
-	  <Outlet />
-	</>
-  )
+	return (
+		<>
+			<Outlet />
+		</>
+	)
 }
 
 export default Items

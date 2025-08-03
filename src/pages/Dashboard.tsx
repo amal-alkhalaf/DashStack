@@ -17,14 +17,25 @@ const Dashboard = () => {
 	const [layer, setLayer] = useState<boolean>(false)
 
 	useEffect(() => {
-		if (localStorage.getItem("token") && localStorage.getItem("user") == "newUser") {
-			toast.success("Created your account successfully", { onClose: () => { setTimeout(() => { toast("Hi, " + JSON.parse(localStorage.getItem("userInfo")).user_name + " 👋🏻😁") }, 3000) } })
-		} else if (localStorage.getItem("token") && localStorage.getItem("user") == "oldUser") {
-			toast.success("you have been logged in successfully")
+		if (localStorage.getItem("token") && localStorage.getItem("user") === "newUser") {
+			toast.success("Created your account successfully", {
+				onClose: () => {
+					setTimeout(() => {
+						const userInfoStr = localStorage.getItem("userInfo");
+						const userInfo = userInfoStr ? JSON.parse(userInfoStr) : null;
+						if (userInfo?.user_name) {
+							toast("Hi, " + userInfo.user_name + " 👋🏻😁");
+						}
+					}, 3000)
+				}
+			});
+		} else if (localStorage.getItem("token") && localStorage.getItem("user") === "oldUser") {
+			toast.success("you have been logged in successfully");
 		} else {
-			navigate('/')
+			navigate('/');
 		}
-	}, [])
+	}, [navigate]);
+
 	return (
 		<div className="relative">
 			<div className={` ${layer ? "bg-gray-700/50 w-screen h-screen absolute z-50" : ""}`}> </div>

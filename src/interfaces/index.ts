@@ -86,3 +86,10 @@ export interface NewProduct{
 	price: string
 	name: string
 }
+
+export interface UserInfo{
+	first_name: "",
+    last_name: "",
+    user_name: "",
+    profile_image_url: "/assets/img/profile.jpg"
+}
