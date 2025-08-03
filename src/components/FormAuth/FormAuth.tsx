@@ -5,7 +5,7 @@ import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 const FormAuth = <T extends object>({ title, subTitle, inputs, btn, footer, setData }: FormAuthProps<T>) => {
 	const data = useRef<T>({} as T);
 
-	const [imgUrl, setImageUrl] = useState<string>("/DashStack/assets/img/profile.jpg");
+	const [imgUrl, setImageUrl] = useState<string>("/assets/img/profile.jpg");
 
 	const sendData = (event: FormEvent) => {
 		event.preventDefault();

@@ -79,9 +79,7 @@ const routes = createBrowserRouter([
       },
     ]
   }
-],{
-  basename:"/DashStack"
-})
+],)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
