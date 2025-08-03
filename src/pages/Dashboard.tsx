@@ -42,12 +42,17 @@ const Dashboard = () => {
 			<div className={`${mode ? "" : "dark"} h-screen flex `}>
 				<ModeContext.Provider value={mode}>
 					<SearchContext.Provider value={search}>
-						<SideBar span="Dash" logo="Stack" setLayer={setLayer} items={[{ content: "Products", url: "/dashboard", icon: <AiOutlineProduct className="text-[18px]" /> },
-						{ content: "Favorites", url: "/dashboard/favorites", icon: <CiHeart className="text-[22px]" /> },
-						{ content: "Order Lists", url: "/dashboard/orders", icon: <FaListCheck className="text-[17px]" /> }]} />
-						<div className="w-[90%] h-[91%]">
-							<NavBar setMode={setMode} setSearch={setSearch} />
-							<div className=" p-6 bg-gray-100 dark:bg-gray-800 h-full ">
+						<div className="h-screen">
+							<SideBar span="Dash" logo="Stack" setLayer={setLayer} items={[{ content: "Products", url: "/dashboard", icon: <AiOutlineProduct className="text-[18px]" /> },
+							{ content: "Favorites", url: "/dashboard/favorites", icon: <CiHeart className="text-[22px]" /> },
+							{ content: "Order Lists", url: "/dashboard/orders", icon: <FaListCheck className="text-[17px]" /> }]} />
+						</div>
+						<div className="w-[90%] h-screen ">
+							<div className="h-[10%]  dark:bg-dark">
+								<NavBar setMode={setMode} setSearch={setSearch} />
+							</div>
+							
+							<div className=" p-6 bg-gray-100 dark:bg-gray-800 h-[90%] ">
 								<Outlet />
 							</div>
 						</div>
