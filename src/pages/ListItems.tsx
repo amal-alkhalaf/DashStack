@@ -58,7 +58,7 @@ const ListItems = () => {
 	}, [itemDeleted])
 	return (
 		<div className="relative">
-			<div className={` ${layer ? "bg-gray-700/50 w-screen h-screen absolute z-50 -top-[82px] -left-[231px]" : ""}`}> </div>
+			<div className={` ${layer ? "bg-gray-700/50 w-screen h-screen absolute z-50 -top-[89px] -left-[244px]" : ""}`}> </div>
 			<div className="flex justify-between">
 				<h1 className="text-2xl font-medium dark:text-white">All Products</h1>
 				<Link to="/dashboard/create" className="bg-blue-700 flex items-center justify-center gap-1 text-white w-[180px] h-10 rounded-md cursor-pointer"><IoMdAddCircleOutline className="text-[22px]" /> Create Product</Link>
